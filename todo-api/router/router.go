@@ -1,0 +1,16 @@
+package router
+
+import (
+	"net/http"
+
+	"todo-api/handler"
+	"todo-api/middleware"
+)
+
+func SetupRouter() *http.ServeMux {
+	r := http.NewServeMux()
+	r.Handle("/todos", middleware.Logger(http.HandlerFunc(handler.GetTodos)))
+	r.Handle("/todos/", middleware.Logger(http.HandlerFunc(handler.GetTodoByID)))
+	r.Handle("/mssqlTest/", middleware.Logger(http.HandlerFunc(handler.MssqlTest)))
+	return r
+}
