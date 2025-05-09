@@ -3,7 +3,7 @@
 一個使用 Go 語言建構的簡單待辦事項 RESTful API，後端採用 Microsoft SQL Server，具備分層式架構，便於維護與擴充。
 
 ## 📁 專案結構
-
+```bash
 todo-api/
 ├── go.mod
 ├── go.sum
@@ -25,7 +25,7 @@ todo-api/
 │   └── logger.go
 └── util/                 // 工具、共用小功能
     └── response.go
-
+```
 
 ## 🚀 快速開始
 
@@ -33,11 +33,5 @@ todo-api/
 
 ```bash
 go mod tidy
-
-MSSQL_USER=sa
-MSSQL_PASSWORD=your_password
-MSSQL_SERVER=localhost
-MSSQL_DATABASE=todo
-PORT=8080
-
 go run main.go
+```
