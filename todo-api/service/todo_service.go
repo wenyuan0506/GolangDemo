@@ -23,6 +23,12 @@ func GetTodoByID(id int) (model.Todo, bool) {
 	return model.Todo{}, false
 }
 
-func MssqlTest(todo model.Todo) {
-	database.InitDB()
+func MssqlTest() string {
+	msg := database.InitDB()
+	return msg
+}
+
+func GetConnString() string {
+	connString := database.ConnString()
+	return connString
 }

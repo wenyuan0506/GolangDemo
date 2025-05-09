@@ -11,14 +11,18 @@ import (
 
 var DB *sql.DB
 
-func InitDB() string {
-	connString := fmt.Sprintf("sqlserver://%s:%s@%s?database=%s&encrypt=disable",
+func ConnString() string {
+	return fmt.Sprintf("sqlserver://%s:%s@%s?database=%s&encrypt=disable",
 		config.GetEnv("MSSQL_USER", "sa"),
 		config.GetEnv("MSSQL_PASSWORD", "password"),
 		config.GetEnv("MSSQL_SERVER", "localhost"),
 		config.GetEnv("MSSQL_DATABASE", "todo"),
 	)
+}
 
+func InitDB() string {
+	// 取得連線字串
+	connString := ConnString()
 	var err error
 	var message string
 	DB, err = sql.Open("sqlserver", connString)

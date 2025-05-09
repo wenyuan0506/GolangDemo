@@ -31,3 +31,9 @@ func MssqlTest(w http.ResponseWriter, r *http.Request) {
 	message := database.InitDB()
 	util.JSON(w, http.StatusOK, map[string]string{"message": message})
 }
+
+func GetConnString(w http.ResponseWriter, r *http.Request) {
+	// 取得 MSSQL 連線字串
+	connString := database.ConnString()
+	util.JSON(w, http.StatusOK, map[string]string{"connString": connString})
+}
