@@ -11,8 +11,6 @@ todo-api/
 ├── .env                  // 環境變數
 ├── config/               // 設定相關（.env 讀取、組態）
 │   └── config.go
-├── database/             // 資料庫初始化、連線
-│   └── mssql.go
 ├── model/                // 資料模型（struct 定義）
 │   └── todo.go
 ├── handler/              // HTTP 路由處理邏輯
