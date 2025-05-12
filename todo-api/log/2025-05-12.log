@@ -1,0 +1,12 @@
+2025/05/12 11:51:38 todo_service.go:59: ✅ 資料庫連線成功
+2025/05/12 11:51:38 logger.go:39: GET /mssqlTest/ -> 200 79 bytes
+Request: 
+Response: {"code":200,"message":"成功","data":{"message":"✅ 資料庫連線成功"}}
+2025/05/12 11:55:16 logger.go:40: GET /mssqlTest/ -> 200 79 bytes
+Request: 
+Response: {"code":200,"message":"成功","data":{"message":"✅ 資料庫連線成功"}}
+2025/05/12 11:55:55 logger.go:40: GET /mssqlTest/ -> 200 79 bytes
+Request: 
+Response: {"code":200,"message":"成功","data":{"message":"✅ 資料庫連線成功"}}
+2025/05/12 11:56:03 todo_service.go:55: 無法 ping 資料庫，請檢查資料庫狀態：mssql: login error: 使用者 'sa' 的登入失敗。
+2025/05/12 11:56:16 todo_service.go:55: 無法 ping 資料庫，請檢查資料庫狀態：mssql: login error: 使用者 'sa' 的登入失敗。

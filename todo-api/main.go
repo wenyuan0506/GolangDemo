@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-
 	"todo-api/config"
 	"todo-api/router"
 )

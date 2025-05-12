@@ -56,7 +56,6 @@ func MssqlTest() string {
 	}
 
 	msg := "✅ 資料庫連線成功"
-	log.Println(msg)
 	return msg
 }
 
